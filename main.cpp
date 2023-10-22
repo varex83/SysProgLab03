@@ -200,8 +200,6 @@ int main() {
 
     std::cin >> filename;
 
-    // open file
-
     FILE* file = fopen(filename.c_str(), "r");
 
     if (file == nullptr) {
@@ -209,17 +207,13 @@ int main() {
         return 1;
     }
 
-    // read file
-
     std::string content;
 
-    char buffer[1024];  // Allocate memory for buffer
-    while (fgets(buffer, sizeof(buffer), file) != nullptr) {  // Read lines safely
-        std::cout << buffer;  // No need for std::endl as fgets retains the newline
+    char buffer[1024];
+    while (fgets(buffer, sizeof(buffer), file) != nullptr) {
+        std::cout << buffer;
         content += buffer;
     }
-
-    // close file
 
     fclose(file);
 

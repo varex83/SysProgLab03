@@ -4,7 +4,7 @@ PROGRAM Triangle
      PRINT *, 'Welcome, please enter the&
               &lengths of the 3 sides.'
      READ *, a, b, c
-     PRINT *, 'Triangle''s area:  ', Area(a,b,c)
+     PRINT *, "Triangle""s area:  ", Area(a,b,c)
     END PROGRAM Triangle
     FUNCTION Area(x,y,z)
      IMPLICIT NONE
